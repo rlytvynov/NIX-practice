@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+#new {
+    position: relative;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #f95959;
+}
+
+.square {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+}
