@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/product.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3fc3ec8a5.js" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -44,7 +45,7 @@
                             <b><a class="enter" href="#">Войти</a></b>
                         </div>
                         <div class="like-logo header-logos">
-                            <img src="images/like.png" alt="like-logo">
+                            <img id="like" src="images/like.png" alt="like-logo">
                             <b>0 шт.</b>
                         </div>
                         <div class="basket-logo header-logos">
@@ -103,7 +104,7 @@
         <div class="container">
             <div class="main__inner">
                 <div class="product-photo">
-                    <img src="images/products/4.png" alt="image">
+                    <img id="product-img" src="images/products/4.png" alt="image">
                     <div class="photo-collection">
                         <img src="images/products/var1.png" alt="image">
                         <img src="images/products/var2.png" alt="image">
@@ -120,9 +121,9 @@
                         </div>
                     </div>
                     <div class="product-type">
-                        <img class="active" src="images/products/4.png" alt="">
-                        <img src="images/products/3.png" alt="">
-                        <img src="images/products/2.png" alt="">
+                        <img onclick="swapImg(this)" class="active" src="images/products/4.png" alt="">
+                        <img onclick="swapImg(this)" src="images/products/3.png" alt="">
+                        <img onclick="swapImg(this)" src="images/products/2.png" alt="">
                     </div>
                     <div class="size-text">Размер:</div>
                     <div class="common-2 first">
@@ -156,20 +157,20 @@
                         <div style="font-size: 6px; text-align: center; color: #FF6565;">опт от 5 000 $</div>
                     </div>
                     <div class="buttons">
-                        <button>В корзину</button>
+                        <button class="buy">В корзину</button>
                         <button>Продолжить покупки</button>
                     </div>
                     <div class="desciption-review">
                         <div class="partition">
-                            <div class="description">Описание</div>
-                            <div class="reviews active">Отзывы(12)</div>
+                            <div style="cursor: pointer;" onclick="showDescription(this)" class="description">Описание</div>
+                            <div style="cursor: pointer;" onclick="showDescription(this)" class="reviews active">Отзывы(12)</div>
                         </div>
                         <div class="descr">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Ad modi dicta beatae. Vitae, beatae. 
                             Quasi harum itaque sapiente reprehenderit at corrupti laborum sequi sit, omnis minus corporis rem, suscipit pariatur.
                         </div>
-                        <div class="comments active">
+                        <div id="comments" class="comments active">
                             <div class="comments__item">
                                 <div class="comments__name">
                                     <div><b>Алексей, </b>22.05.2022</div>
@@ -220,10 +221,10 @@
                     <section class="form">
                         <h3>Добавить отзыв</h3>
 
-                        <form action="#">
-                            <input type="text" name="name" id="name" placeholder="Введите имя">
-                            <input type="email" name="email" id="email" placeholder="Адрес электронной почты">
-                            <input type="text" name="comment" id="comment" placeholder="Добавьте комментарий">
+                        <form id="myForm" action="#">
+                            <input class="form-field" type="text" name="name" id="name" placeholder="Введите имя">
+                            <input class="form-field" type="email" name="email" id="email" placeholder="Адрес электронной почты">
+                            <textarea class="form-field" name="comment" id="comment" cols="30" rows="10" placeholder="Добавьте комментарий"></textarea>
                             <div class="rate-form">
                                 <h6>Поставьте оценку</h6>
                                 <div class="rate__inner">
@@ -233,7 +234,7 @@
                                     <span class="fa-regular fa-star"></span>
                                     <span class="fa-regular fa-star"></span>
                                 </div>
-                                <button type="submit">Отправить</button>
+                                <a class="form-button" href="javascript:checkForm()">Передать форму</a>
                             </div>
                         </form>
                     </section>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3fc3ec8a5.js" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -44,12 +45,12 @@
                             <b><a class="enter" href="#">Войти</a></b>
                         </div>
                         <div class="like-logo header-logos">
-                            <img src="images/like.png" alt="like-logo">
-                            <b>0 шт.</b>
+                            <img id = "like" src="images/like.png" alt="like-logo">
+                            <b>3 шт.</b>
                         </div>
                         <div class="basket-logo header-logos">
-                            <img src="images/basket.png" alt="basket-logo">
-                            <b>1234$</b>
+                            <img id="basket" src="images/basket.png" alt="basket-logo">
+                            <b>369$</b>
                         </div>
                     </div>
                 </div>
@@ -89,57 +90,66 @@
     <div class="main">
         <div class="container">
             <div class="main__inner">
-                <div class="catalog-bar">
+                <div id="catalog-bar" class="catalog-bar">
                     <a class="select active" href="#">Сумки</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active" href="#">Для дома</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active" href="#">Косметички</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active"href="#">Для путешествий</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active" href="#">Аксессуары для очков</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active" href="#">Товары для животных</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a class="select active" href="#">Рукоделие</a>
                     <ul class="catalog__list">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a href="#">Пояс для инструментов</a>
                     <a href="#">Таблетницы</a>
+
                     <a class="select unactive" href="#">Пепельницы</a>
                     <ul class="catalog__list unactive">
                         <li><a href="#">Сумка для ноутбука</a></li>
                         <li><a href="#">Сумка для фотоаппарата</a></li>
                         <li><a href="#">Сумка для ноутбука</a></li>
                     </ul>
+
                     <a href="#">Бахилы силиконовые</a>
                     <a href="#">Четки</a>
                     <a href="#">Подарки для нее</a>
@@ -161,7 +171,7 @@
                         
                         <div class="products__item">
                             <div class="products__item-image">
-                                <img src="images/products/1.png" alt="">
+                                <img onclick="elementChoosen(this)" style="cursor: pointer;" src="images/products/1.png" alt="">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                             <div class="products__item-chars">
@@ -231,7 +241,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -272,7 +282,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -312,7 +322,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -353,7 +363,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -393,7 +403,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -474,7 +484,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -514,7 +524,7 @@
                                     </div>
                                 </div>
                                 <div class="to-basket">
-                                    <button>В корзину</button>
+                                    <button class="buy">В корзину</button>
                                     <div class="rate">
                                         <div class="rate-num">4.7</div>
                                         <img src="images/rate.png" alt="">
@@ -678,7 +688,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -718,7 +728,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -799,7 +809,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -840,7 +850,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -880,7 +890,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -929,7 +939,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -969,7 +979,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -1050,7 +1060,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -1091,7 +1101,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">
@@ -1131,7 +1141,7 @@
                                 </div>
                             </div>
                             <div class="to-basket">
-                                <button>В корзину</button>
+                                <button class="buy">В корзину</button>
                                 <div class="rate">
                                     <div class="rate-num">4.7</div>
                                     <img src="images/rate.png" alt="">

@@ -511,7 +511,9 @@ h1, h2, h3, h4, h5, h6, p {
     align-items:flex-start;
 }
 
-.form input {
+.form input, 
+.form textarea {
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 18px;
     border: none;
     background: #F6F6F6;
@@ -552,8 +554,10 @@ h1, h2, h3, h4, h5, h6, p {
     height: 90px;
 }
 
-.form .rate-form button {
-    padding: 5px 20px;
+.form .rate-form .form-button {
+    font-size: 10px;
+    text-decoration: none;
+    padding: 5px 15px;
     border: 2px solid #181818;
     background: #181818;
     border-radius: 45px;

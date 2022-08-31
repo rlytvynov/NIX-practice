@@ -22,43 +22,43 @@
 		*/
 
 		function setPlusIcon() {
-				let uls = Object.values(document.getElementsByClassName('expandable'))
-				let lis = null
-				
-				uls.forEach(element => {
-					lis = Object.values(element.children)
-					lis.forEach(li => {
-						if(li.hasChildNodes() && li.childElementCount !== 1) {
-							li.style['list-style-image'] = "url('img/plus.gif')"
-						}
-						li.firstElementChild.addEventListener('click', aClick)
-					})
-				});
-			}
+			let uls = Object.values(document.getElementsByClassName('expandable'))
+			let lis = null
+			
+			uls.forEach(element => {
+				lis = Object.values(element.children)
+				lis.forEach(li => {
+					if(li.hasChildNodes() && li.childElementCount !== 1) {
+						li.style['list-style-image'] = "url('img/plus.gif')"
+					}
+					li.firstElementChild.addEventListener('click', aClick)
+				})
+			});
+		}
 
 		window.onload = function() {
 			setPlusIcon()
 		}
 
 		function aClick(e){
-				e.preventDefault()
-				let li = e.target.parentNode
-				let ul = e.target.nextElementSibling
+			e.preventDefault()
+			let li = e.target.parentNode
+			let ul = e.target.nextElementSibling
 
-				if(!e.target.nextElementSibling) {
-					window.location = this.href;
+			if(!e.target.nextElementSibling) {
+				window.location = this.href;
+			} else {
+				if(!ul.classList.contains('active')) {
+					ul.style.display = 'block'
+					ul.classList.add('active')
+					li.style['list-style-image'] = "url('img/minus.gif')"
 				} else {
-					if(!ul.classList.contains('active')) {
-						ul.style.display = 'block'
-						ul.classList.add('active')
-						li.style['list-style-image'] = "url('img/minus.gif')"
-					} else {
-						ul.style.display = 'none'
-						ul.classList.remove('active')
-						li.style['list-style-image'] = "url('img/plus.gif')"
-					}
+					ul.style.display = 'none'
+					ul.classList.remove('active')
+					li.style['list-style-image'] = "url('img/plus.gif')"
 				}
 			}
+		}
 	
 		/*
 			Опишите функцию aClick(), которая обрабатывает щелчок по ссылке
